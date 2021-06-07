@@ -1,16 +1,15 @@
+
+
 <?php
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
-class HelloController extends Controller
+class Controller extends BaseController
 {
-    public function index()
-    {
-        $data = [
-            'content' => '本文',
-        ];
-        return view('hello.index', $data);
-    }
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

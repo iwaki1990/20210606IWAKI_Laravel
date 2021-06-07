@@ -10,6 +10,8 @@
 
 <body>
   <h1>タイトル</h1>
+  <p><?php echo $msg; ?></p>
+  <p><?php echo $id; ?></p>
 </body>
 
 </html>
