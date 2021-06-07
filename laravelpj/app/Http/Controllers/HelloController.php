@@ -1,6 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HelloController;
+namespace App\Http\Controllers;
 
-Route::get('/hello', [HelloController::class, 'index']);
+class HelloController extends Controller
+{
+    public function index(){
+        return view('hello.index');
+    }
+}
